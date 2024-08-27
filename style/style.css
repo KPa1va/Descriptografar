@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root{
+    --color1:#F3F5FC;
+    --color2:#0A3871;
+    --color3:#F3F5FC;
+    --color4:#EFF1FA;
+    --color5:#F3F5FC;
+    --textarea:#F3F5FC;
+    --message-color: #F3F5FC;
+}
+
+*{
+    font-family: "Inter", sans-serif;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 150%;
+
+}
+
+body{
+    background: (var(--color4));
+}
+
+.logo{
+    margin-left: 75px;
+    padding-top: 25px;
+    width: 2%;
+}
+
+.logo>img{
+    width: 30px;
+}
+
+main{
+    display: flex;
+    margin-bottom: 50px;
+    margin-left: 80px;
+}
+
+.__text-area{
+    border: none;
+    color: black;
+    background-color: (var(--color1));
+    margin: 90px 0px 90px 30px;
+    text-transform: lowercase;
+}
+
+::placeholder {color: var(--color2)}
+    .__text-area:focus{
+        outline: none;
+    }
+::placeholder {color: #343A40;}
+    .__message:focus{
+        outline: none;
+    }
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 400px;
+    margin-left: 1rem;
+    align-items: center;
+}
+
+.container>img{
+    width: 326px;
+    height: 300px;
+}
+
+.container>h6 {
+    color: #343A40;
+    font-weight: bold;
+    font-size: 1rem;
+    text-align: center;
+    width: 347px;
+    height: 58px;
+    margin-bottom: 5px;
+}
+
+.container>p {
+    color: #495057;
+    font-size: 0.8rem;
+    text-align: center;
+    width: 300px;
+    height: 45px;
+}
+
+.__message{
+    background-image: url(./assets/boneco.png);
+    background-repeat: no-repeat;
+    border: none;
+    border-radius: 32px;
+    color: #495057;
+    background-color: var(--message-color);
+    padding: 10px;
+    height: 500px;
+    width: 400px;
+    box-sizing: border-box;
+}
+
+.__message:focus{
+    outline: none;
+}
+
+.__butons{
+    display: flex;
+    margin-top: 15px;
+}
+
+.__button-encrypt{
+    background-color: var(--color2);
+    color: var(--color1);
+    border-radius: 24px;
+    cursor: pointer;
+    height: 67px;
+    width: 328px;
+}
+
+.__button-descrypt{
+    background-color: var(--color1);
+    color: var(--color2);
+    margin-left: 30px;
+    border-radius: 24px;
+    cursor: pointer;
+    height: 67px;
+    width: 328px;
+}
+
+.__button-encrypt:hover{
+    background-color: var(--color1);
+    color: (var(--color2));
+}
+
+.__button-descrypt:hover {
+    background-color: var(--color2);
+    color: var(--color1);
+}
+
+.__button-copy{
+    border-radius: 24px;
+    cursor: pointer;
+    height: 67px;
+    position: absolute;
+    top:73%;
+    width: 336px;
+    background-color: (var(--color4));
+    color: (var(--color2));
+}
+
+.__button-copy:hover{
+    background-color: (var(--color2));
+    color: (var(--color4));
+}
+
+.__icon{
+    display: inline;
+}
+
+.__instruction{
+    display: inline;
+    font-size: small;
+}
+
+footer{
+    text-align: center;
+    background-color: (var(--color2));
+    color: (var(--color4));
+    margin: auto;
+    padding: auto;
+}
+
+footer>p{
+    font-size: 20px;
+}
+
+footer>p>a{
+    font-size: 20px;
+    text-decoration: none;
+    cursor: pointer;
+    color: (var(--color4));
+}
+
+@media only screen and (max-width: 768px){
+    body{
+        background:linear-gradient(var(--color3)) ;
+    }
+    main{
+        font-size: 1rem;
+        flex-direction: column;
+    }
+    section{
+        width: 50vw;
+    }
+
+    .__buttons{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+    .__button-descrypt,.__button-encrypt{
+        width: 50vw;
+        margin-left: 0;
+        margin-top: 5%;
+    }
+    .__button-copy{
+        top: 70%;
+        right: 20%;
+        width:50vw;
+    }
+    .__message{
+        background-image: none;
+        height: 50vh;
+        width: 80vw;
+        border: none;
+        margin-left:2px;
+        margin-top: 20px;
+        padding-left: 20px;
+    }
+    
+}
+
+@media only screen and (max-width: 480px){
+    main{
+        flex-direction: column;
+    }
+
+    .__buttons{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+    .__button-descrypt,.__button-encrypt{
+        width: 100vw;
+        margin-left: 50%;
+        margin-top: 5%;
+    }
+    .__button-copy{
+        width:60vw;
+        right: 13%;
+    }
+    .__message{
+        background-image: none;
+        border: none;
+        margin-left:2px;
+        margin-top: 20px;
+        padding-left: 20px;
+    }
+    
+}
